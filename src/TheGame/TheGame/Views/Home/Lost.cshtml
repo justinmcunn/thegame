@@ -1,0 +1,63 @@
+﻿@model TheGame.Models.LostModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>You Just Lost the Game As A Service</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <style>
+        body {
+            margin-top: 50px;
+        }
+
+         h1 {
+             font-family: 'Open Sans', helvetica, arial, sans-serif;
+             font-size: 50px;
+             color: #2f2f2f;
+         }
+
+        h2 {
+            font-family: 'Open Sans', helvetica, arial, sans-serif;
+            font-size: 70px;
+            color: #fff;
+        }
+
+        h3 {
+            font-family: 'Open Sans', helvetica, arial, sans-serif;
+            font-size: 30px;
+            color: #2f2f2f;
+        }
+
+        #box {
+            background-color: #03C9A9;
+            padding: 30px 0;
+        }
+    </style>
+</head>
+    <body>
+        <div id="box">
+            <div class="container">
+
+                @if (!string.IsNullOrEmpty(Model.Name))
+                {
+                    <h1>@(Model.Name.First().ToString().ToUpper() + String.Join("", @Model.Name.Skip(1)))</h1>
+                }
+
+                <h2>You just lost the game.</h2>
+
+                @if (!string.IsNullOrEmpty(Model.From))
+                {
+                    <h3>@("- " + Model.From.First().ToString().ToUpper() + String.Join("", @Model.From.Skip(1)))</h3>
+                }
+
+            </div>
+        </div>
+    </body>
+</html>
