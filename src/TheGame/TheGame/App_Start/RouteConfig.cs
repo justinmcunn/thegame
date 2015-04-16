@@ -16,7 +16,7 @@ namespace TheGame
             routes.MapRoute(
                name: "YouJustLost",
                url: "{action}/{name}/{from}",
-               defaults: new { controller = "Home" }
+               defaults: new { controller = "Home", action = "Lost" }
            );
         }
     }
