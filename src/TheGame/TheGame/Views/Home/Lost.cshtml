@@ -1,64 +1,47 @@
 ﻿@model TheGame.Models.LostModel
-@{
-    Layout = null;
-}
-
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>You Just Lost the Game As A Service</title>
-
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <style>
-        body {
-            margin-top: 50px;
-        }
-
-         h1 {
-             font-family: 'Open Sans', helvetica, arial, sans-serif;
-             font-size: 50px;
-             color: #2f2f2f;
-         }
-
-        h2 {
-            font-family: 'Open Sans', helvetica, arial, sans-serif;
-            font-size: 70px;
-            color: #fff;
-        }
-
-        h3 {
-            font-family: 'Open Sans', helvetica, arial, sans-serif;
-            font-size: 30px;
-            color: #2f2f2f;
-        }
-
-        #box {
-            background-color: #03C9A9;
-            padding: 30px 0;
-        }
-    </style>
+    <link href='@Url.Content("~/Content/thegame.css")' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/x-icon" href="@Url.Content("~/favicon.ico")" />
 </head>
     <body>
-        <a href="https://github.com/justinmcunn/thegame"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
-        <div id="box">
-            <div class="container">
-
-                @if (!string.IsNullOrEmpty(Model.Name))
-                {
-                    <h1>@(Model.Name.First().ToString().ToUpper() + String.Join("", @Model.Name.Skip(1)))</h1>
-                }
-
-                <h2>You just lost the game.</h2>
-
-                @if (!string.IsNullOrEmpty(Model.From))
-                {
-                    <h3>@("- " + Model.From.First().ToString().ToUpper() + String.Join("", @Model.From.Skip(1)))</h3>
-                }
-
+        <div id="you">
+            <a id="totally" href="https://github.com/justinmcunn/thegame">
+                <img id="and-utterly" style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+            </a>
+            <div id="lost">
+                <div id="the">
+                    <div id="game">
+                        @if (Model != null)
+                        {
+                            if (!String.IsNullOrWhiteSpace(Model.Name))
+                            {
+                                <h2>@Model.Name,</h2>
+                            }
+                            <h1>You lost the game.</h1>
+                            if (!String.IsNullOrWhiteSpace(Model.Name))
+                            {
+                                <h2>-@Model.From</h2>
+                            }
+                        }
+                        else
+                        {
+                            <h1>You lost the game.</h1>
+                        }
+                    </div>
+                </div>
             </div>
+            <a id="shoutout" href="http://www.giphy.com">
+                <img id="yolo" src="@Url.Content("~/Content/giphy.png")" title="All Images courtesy of Giphy">
+            </a>
         </div>
+        @if (ViewBag.LaughingAtYourLossImage != null)
+        {
+            <img id="lol" src="@ViewBag.LaughingAtYourLossImage" />
+        }
     </body>
 </html>

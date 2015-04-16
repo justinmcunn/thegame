@@ -9,5 +9,8 @@ namespace TheGame.Models
     {
         public string Name { get; set; }
         public string From { get; set; }
+
+        // Added custom tag support for when you want to speak to the victim; Punkin' with a personal touch.
+        public string Tag { get; set; }
     }
 }
