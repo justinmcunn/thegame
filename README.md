@@ -8,4 +8,6 @@ An example can be found at:
 
 http://www.thugaim.com/lost/github/justin
 
+More information can be found at:
 
+http://en.wikipedia.org/wiki/The_Game_%28mind_game%29
