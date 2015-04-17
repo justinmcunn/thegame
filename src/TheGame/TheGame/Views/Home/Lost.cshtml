@@ -7,17 +7,7 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href='@Url.Content("~/Content/thegame.css")' rel='stylesheet' type='text/css'>
     <link rel="icon" type="image/x-icon" href="@Url.Content("~/favicon.ico")" />
-    
-    <script type="text/javascript">
-        var appInsights=window.appInsights||function(config){
-            function s(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},r=document,f=window,e="script",o=r.createElement(e),i,u;for(o.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",r.getElementsByTagName(e)[0].parentNode.appendChild(o),t.cookie=r.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)s("track"+i.pop());return config.disableExceptionTracking||(i="onerror",s("_"+i),u=f[i],f[i]=function(config,r,f,e,o){var s=u&&u(config,r,f,e,o);return s!==!0&&t["_"+i](config,r,f,e,o),s}),t
-        }({
-            instrumentationKey:"ae46b9eb-cb42-4a03-ac26-b4b23e1bdf34"
-        });
-
-        window.appInsights=appInsights;
-        appInsights.trackPageView();
-    </script>
+    <script src="@Url.Content("~/Scripts/dogthebountyhunter.js")"></script>
 </head>
     <body>
         <div id="you">
@@ -48,11 +38,32 @@
             </div>
             <a id="shoutout" href="http://www.giphy.com">
                 <img id="yolo" src="@Url.Content("~/Content/giphy.png")" title="All Images courtesy of Giphy">
+                <script type="text/javascript">
+                    // Throwing this in here to maintain the integrity of the appearance of the markup #baller
+                    var b = []; b.push("\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591"); b.push("\u2591\u2591\u2591\u2591\u2591LOADING\u2591PLEASE\u2591WAIT\u2591\u2591\u2591\u2591\u2591"); b.push("\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591");
+                    b.push("\u2591\u2591\u2591\u2591\u2591\u2584\u2584\u2584\u2584\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2584\u2584\u2584\u2584\u2584\u2584\u2591\u2591\u2591\u2591\u2591\u2591\u2591"); b.push("\u2591\u2591\u2591\u2591\u2591\u2588\u2591\u2591\u2591\u2591\u2592\u2592\u2592\u2592\u2592\u2592\u2592\u2592\u2592\u2592\u2592\u2592\u2591\u2591\u2580\u2580\u2584\u2591\u2591\u2591\u2591"); b.push("\u2591\u2591\u2591\u2591\u2588\u2591\u2591\u2591\u2592\u2592\u2592\u2592\u2592\u2592\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2592\u2592\u2592\u2591\u2591\u2588\u2591\u2591\u2591");
+                    b.push("\u2591\u2591\u2591\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2584\u2588\u2588\u2580\u2584\u2584\u2591\u2591\u2591\u2591\u2591\u2584\u2584\u2584\u2591\u2591\u2591\u2591\u2588\u2591\u2591"); b.push("\u2591\u2584\u2580\u2592\u2584\u2584\u2584\u2592\u2591\u2588\u2580\u2580\u2580\u2580\u2584\u2584\u2588\u2591\u2591\u2591\u2588\u2588\u2584\u2584\u2588\u2591\u2591\u2591\u2591\u2588\u2591"); b.push("\u2588\u2591\u2592\u2588\u2592\u2584\u2591\u2580\u2584\u2584\u2584\u2580\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2588\u2591\u2591\u2591\u2592\u2592\u2592\u2592\u2592\u2591\u2588");
+                    b.push("\u2588\u2591\u2592\u2588\u2591\u2588\u2580\u2584\u2584\u2591\u2591\u2591\u2591\u2591\u2588\u2580\u2591\u2591\u2591\u2591\u2580\u2584\u2591\u2591\u2584\u2580\u2580\u2580\u2584\u2592\u2588"); b.push("\u2591\u2588\u2591\u2580\u2584\u2591\u2588\u2584\u2591\u2588\u2580\u2584\u2584\u2591\u2580\u2591\u2580\u2580\u2591\u2584\u2584\u2580\u2591\u2591\u2591\u2591\u2588\u2591\u2591\u2588\u2591"); b.push("\u2591\u2591\u2588\u2591\u2591\u2591\u2580\u2584\u2580\u2588\u2584\u2584\u2591\u2588\u2580\u2580\u2580\u2584\u2584\u2584\u2584\u2580\u2580\u2588\u2580\u2588\u2588\u2591\u2588\u2591\u2591");
+                    b.push("\u2591\u2591\u2591\u2588\u2591\u2591\u2591\u2591\u2588\u2588\u2591\u2591\u2580\u2588\u2584\u2584\u2584\u2588\u2584\u2584\u2588\u2584\u2588\u2588\u2588\u2588\u2591\u2588\u2591\u2591\u2591"); b.push("\u2591\u2591\u2591\u2591\u2588\u2591\u2591\u2591\u2591\u2580\u2580\u2584\u2591\u2588\u2591\u2591\u2591\u2588\u2591\u2588\u2580\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2588\u2591\u2591"); b.push("\u2591\u2591\u2591\u2591\u2591\u2580\u2584\u2591\u2591\u2591\u2591\u2591\u2580\u2580\u2584\u2584\u2584\u2588\u2584\u2588\u2584\u2588\u2584\u2588\u2584\u2580\u2591\u2591\u2588\u2591\u2591");
+                    b.push("\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2580\u2584\u2584\u2591\u2592\u2592\u2592\u2592\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2592\u2591\u2591\u2591\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591"); b.push("\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2580\u2580\u2584\u2584\u2591\u2592\u2592\u2592\u2592\u2592\u2592\u2592\u2592\u2592\u2592\u2591\u2591\u2591\u2591\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591*-*-*-*-*-*-*-*-*-*-*-\u2591");
+                    b.push("\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2580\u2584\u2584\u2584\u2584\u2584\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591-\u2591\u2591you lost the game\u2591*\u2591"); b.push("\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591*-*-*-*-*-*-*-*-*-*-*-\u2591");
+                    b.push("\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591");
+                    var l = new function () {
+                            function r(a) { return k ? m(a) : "\n" + a.join("\n") + "\n" } function t(a) { return k ? m(a.split("\n")) : "\n" + a + "\n" } function m(a) { var c = 0; for (c; c < a.length; c++) a[c] = a[c].replace(/ /g, u); return a } function v() { var a = document.head, c = a.parentNode; if (k) { var d = 0, e = f[0].length; for (d; e > d; d++) { var g = document.createComment(""); h.push(g); c.insertBefore(g, a) } } else g = document.createComment(""), h.push(g), c.insertBefore(g, a) } var e = 0, f = [], h = [], k = !window.chrome, n = null, u = "\u00a0"; return function (a, c) {
+                                for (var d in c) d in
+                                    a || (a[d] = c[d]); return a
+                            }(function () { }, { a: function (a) { a || (a = "no frame data"); var c = typeof a; "object" === c ? f.push(r(a)) : "string" === c && f.push(t(a)) }, b: function (a) { return a || (a = 500), 0 === f.length ? void console.log("I need frames to animate. You can add them with .addFrame( string )") : (v(), void (n = setInterval(function () { var a = f[e]; if (k) { var d = 0; for (d; d < h.length; d++) h[d].nodeValue = a[d] } else h[0].nodeValue = a; e += 1; e === f.length && (e = 0) }, a))) }, stop: function () { clearInterval(n) } })
+                        }, p = b.join("\n"), q = 1;
+                    for (; q <= p.length; q++) l.a(p.substring(0, q) + "\na"); l.b(25);
+                </script>
             </a>
+            
         </div>
         @if (ViewBag.LaughingAtYourLossImage != null)
         {
             <img id="lol" src="@ViewBag.LaughingAtYourLossImage" />
         }
+        
+
     </body>
 </html>

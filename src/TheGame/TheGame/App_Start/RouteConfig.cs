@@ -18,6 +18,12 @@ namespace TheGame
                url: "{action}/{name}/{from}",
                defaults: new { controller = "Home", action = "Lost" }
            );
+
+            routes.MapRoute(
+                "NotFound",
+                "{*url}",
+                new { controller = "Home", action = "Lost" }
+            );
         }
     }
 }
