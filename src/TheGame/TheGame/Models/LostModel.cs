@@ -12,5 +12,6 @@ namespace TheGame.Models
 
         // Added custom tag support for when you want to speak to the victim; Punkin' with a personal touch.
         public string Tag { get; set; }
+        public string LaughingAtYourLossImage { get; set; }
     }
 }

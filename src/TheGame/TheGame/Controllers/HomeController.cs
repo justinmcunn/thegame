@@ -20,8 +20,8 @@ namespace TheGame.Controllers
 
         public async Task<ActionResult> Lost(LostModel model)
         {
-            // Spice things up a little bit
-            ViewBag.LaughingAtYourLossImage = await _giphyProxy.GetRandomGif(model.Tag) ?? Url.Content("~/Content/fiddy.gif");
+            
+            model.LaughingAtYourLossImage = await _giphyProxy.GetRandomGif(model.Tag) ?? Url.Content("~/Content/fiddy.gif");
             return View(model);
         }
     }
