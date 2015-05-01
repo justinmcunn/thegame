@@ -9,13 +9,13 @@ namespace TheGame.Helpers
     /// A Helper class for accessing the Giphy API to populate rediculous images that will appear
     /// to shame the recipient on top of already losing the game.
     /// </summary>
-    public class GiphyHelper
+    public class GiphyProxy
     {
         /// <summary>
         /// A method to return a random Gif file to embarrass the victim from the Giphy API.
         /// </summary>
         /// <returns>The URL for a hopefully relevant and hilarious image.</returns>
-        public static async Task<string> GetRandomGif(string tag)
+        public async Task<string> GetRandomGif(string tag)
         {
             try
             {
@@ -46,7 +46,7 @@ namespace TheGame.Helpers
         /// A method to generate a random tag to use as a focal point to punk the victim
         /// </summary>
         /// <returns>A random word to use to query the Giphy API</returns>
-        private static string GetRandomTag()
+        private string GetRandomTag()
         {
             // With so many expressions to convey losing the game, it's tough to pick just one
             var tags = new[] { "mind blown", "laugh", "frustrated", "surprised", "facepalm", "lol", "mic drop", "laugh", "shocked" };

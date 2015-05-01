@@ -11,10 +11,17 @@ namespace TheGame.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly GiphyProxy _giphyProxy;
+
+        public HomeController(GiphyProxy giphyProxy)
+        {
+            _giphyProxy = giphyProxy;
+        }
+
         public async Task<ActionResult> Lost(LostModel model)
         {
             // Spice things up a little bit
-            ViewBag.LaughingAtYourLossImage = await GiphyHelper.GetRandomGif(model.Tag) ?? Url.Content("~/Content/fiddy.gif");
+            ViewBag.LaughingAtYourLossImage = await _giphyProxy.GetRandomGif(model.Tag) ?? Url.Content("~/Content/fiddy.gif");
             return View(model);
         }
     }
