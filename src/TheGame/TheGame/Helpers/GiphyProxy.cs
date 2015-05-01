@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Helpers;
@@ -23,7 +24,7 @@ namespace TheGame.Helpers
                 using (var client = new HttpClient())
                 {
                     // Set the API to a private key during release
-                    var apiKey = "dc6zaTOxFJmzC";
+                    var apiKey = ConfigurationManager.AppSettings["GiphyPrivateKey"];
 
                     // Determine the fate of the recipient by generating a random category and constructing an endpoint
                     var target = String.Format("http://api.giphy.com/v1/gifs/random?api_key={0}&tag={1}",apiKey, tag ?? GetRandomTag());
