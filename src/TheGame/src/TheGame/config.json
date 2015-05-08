@@ -1,0 +1,10 @@
+{
+  "AppSettings": {
+    "SiteTitle": "TheGame"
+  },
+  "Data": {
+    "DefaultConnection": {
+      "ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=aspnet5-TheGame-48c0adf4-97c8-4f48-bdce-8d47e0f67b0d;Trusted_Connection=True;MultipleActiveResultSets=true"
+    }
+  }
+}

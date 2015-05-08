@@ -1,0 +1,69 @@
+﻿@model TheGame.Models.LostModel
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>You Just Lost the Game As A Service</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='@Url.Content("~/css/thegame.css")' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/x-icon" href="@Url.Content("~/favicon.ico")" />
+    <script src="@Url.Content("~/Scripts/dogthebountyhunter.js")"></script>
+</head>
+<body>
+    <div id="you">
+        <a id="totally" href="https://github.com/justinmcunn/thegame">
+            <img id="and-utterly" style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png">
+        </a>
+        <div id="lost">
+            <div id="the">
+                <div id="game">
+                    @if (Model != null)
+                    {
+                        if (!String.IsNullOrWhiteSpace(Model.Name))
+                        {
+                            <h2>@Model.Name,</h2>
+                        }
+                        <h1>You lost the game.</h1>
+                        if (!String.IsNullOrWhiteSpace(Model.Name))
+                        {
+                            <h2>-@Model.From</h2>
+                        }
+                    }
+                    else
+                    {
+                        <h1>You lost the game.</h1>
+                    }
+                </div>
+            </div>
+        </div>
+        <a id="shoutout" href="http://www.giphy.com">
+            <img id="yolo" src="@Url.Content("~/giphy.png")" title="All Images courtesy of Giphy">
+            <script type="text/javascript">
+                    // Throwing this in here to maintain the integrity of the appearance of the markup #baller
+                    var b = []; b.push("\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591"); b.push("\u2591\u2591\u2591\u2591\u2591LOADING\u2591PLEASE\u2591WAIT\u2591\u2591\u2591\u2591\u2591"); b.push("\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591");
+                    b.push("\u2591\u2591\u2591\u2591\u2591\u2584\u2584\u2584\u2584\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2584\u2584\u2584\u2584\u2584\u2584\u2591\u2591\u2591\u2591\u2591\u2591\u2591"); b.push("\u2591\u2591\u2591\u2591\u2591\u2588\u2591\u2591\u2591\u2591\u2592\u2592\u2592\u2592\u2592\u2592\u2592\u2592\u2592\u2592\u2592\u2592\u2591\u2591\u2580\u2580\u2584\u2591\u2591\u2591\u2591"); b.push("\u2591\u2591\u2591\u2591\u2588\u2591\u2591\u2591\u2592\u2592\u2592\u2592\u2592\u2592\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2592\u2592\u2592\u2591\u2591\u2588\u2591\u2591\u2591");
+                    b.push("\u2591\u2591\u2591\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2584\u2588\u2588\u2580\u2584\u2584\u2591\u2591\u2591\u2591\u2591\u2584\u2584\u2584\u2591\u2591\u2591\u2591\u2588\u2591\u2591"); b.push("\u2591\u2584\u2580\u2592\u2584\u2584\u2584\u2592\u2591\u2588\u2580\u2580\u2580\u2580\u2584\u2584\u2588\u2591\u2591\u2591\u2588\u2588\u2584\u2584\u2588\u2591\u2591\u2591\u2591\u2588\u2591"); b.push("\u2588\u2591\u2592\u2588\u2592\u2584\u2591\u2580\u2584\u2584\u2584\u2580\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2588\u2591\u2591\u2591\u2592\u2592\u2592\u2592\u2592\u2591\u2588");
+                    b.push("\u2588\u2591\u2592\u2588\u2591\u2588\u2580\u2584\u2584\u2591\u2591\u2591\u2591\u2591\u2588\u2580\u2591\u2591\u2591\u2591\u2580\u2584\u2591\u2591\u2584\u2580\u2580\u2580\u2584\u2592\u2588"); b.push("\u2591\u2588\u2591\u2580\u2584\u2591\u2588\u2584\u2591\u2588\u2580\u2584\u2584\u2591\u2580\u2591\u2580\u2580\u2591\u2584\u2584\u2580\u2591\u2591\u2591\u2591\u2588\u2591\u2591\u2588\u2591"); b.push("\u2591\u2591\u2588\u2591\u2591\u2591\u2580\u2584\u2580\u2588\u2584\u2584\u2591\u2588\u2580\u2580\u2580\u2584\u2584\u2584\u2584\u2580\u2580\u2588\u2580\u2588\u2588\u2591\u2588\u2591\u2591");
+                    b.push("\u2591\u2591\u2591\u2588\u2591\u2591\u2591\u2591\u2588\u2588\u2591\u2591\u2580\u2588\u2584\u2584\u2584\u2588\u2584\u2584\u2588\u2584\u2588\u2588\u2588\u2588\u2591\u2588\u2591\u2591\u2591"); b.push("\u2591\u2591\u2591\u2591\u2588\u2591\u2591\u2591\u2591\u2580\u2580\u2584\u2591\u2588\u2591\u2591\u2591\u2588\u2591\u2588\u2580\u2588\u2588\u2588\u2588\u2588\u2588\u2591\u2588\u2591\u2591"); b.push("\u2591\u2591\u2591\u2591\u2591\u2580\u2584\u2591\u2591\u2591\u2591\u2591\u2580\u2580\u2584\u2584\u2584\u2588\u2584\u2588\u2584\u2588\u2584\u2588\u2584\u2580\u2591\u2591\u2588\u2591\u2591");
+                    b.push("\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2580\u2584\u2584\u2591\u2592\u2592\u2592\u2592\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2592\u2591\u2591\u2591\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591"); b.push("\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2580\u2580\u2584\u2584\u2591\u2592\u2592\u2592\u2592\u2592\u2592\u2592\u2592\u2592\u2592\u2591\u2591\u2591\u2591\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591*-*-*-*-*-*-*-*-*-*-*-\u2591");
+                    b.push("\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2580\u2584\u2584\u2584\u2584\u2584\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2588\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591-\u2591\u2591you lost the game\u2591*\u2591"); b.push("\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591*-*-*-*-*-*-*-*-*-*-*-\u2591");
+                    b.push("\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591\u2591");
+                    var l = new function () {
+                            function r(a) { return k ? m(a) : "\n" + a.join("\n") + "\n" } function t(a) { return k ? m(a.split("\n")) : "\n" + a + "\n" } function m(a) { var c = 0; for (c; c < a.length; c++) a[c] = a[c].replace(/ /g, u); return a } function v() { var a = document.head, c = a.parentNode; if (k) { var d = 0, e = f[0].length; for (d; e > d; d++) { var g = document.createComment(""); h.push(g); c.insertBefore(g, a) } } else g = document.createComment(""), h.push(g), c.insertBefore(g, a) } var e = 0, f = [], h = [], k = !window.chrome, n = null, u = "\u00a0"; return function (a, c) {
+                                for (var d in c) d in
+                                    a || (a[d] = c[d]); return a
+                            }(function () { }, { a: function (a) { a || (a = "no frame data"); var c = typeof a; "object" === c ? f.push(r(a)) : "string" === c && f.push(t(a)) }, b: function (a) { return a || (a = 500), 0 === f.length ? void console.log("I need frames to animate. You can add them with .addFrame( string )") : (v(), void (n = setInterval(function () { var a = f[e]; if (k) { var d = 0; for (d; d < h.length; d++) h[d].nodeValue = a[d] } else h[0].nodeValue = a; e += 1; e === f.length && (e = 0) }, a))) }, stop: function () { clearInterval(n) } })
+                        }, p = b.join("\n"), q = 1;
+                    for (; q <= p.length; q++) l.a(p.substring(0, q) + "\na"); l.b(25);
+            </script>
+        </a>
+
+    </div>
+    @if (Model.LaughingAtYourLossImage != null)
+    {
+        <img id="lol" src="@Model.LaughingAtYourLossImage" />
+    }
+
+
+</body>
+</html>
